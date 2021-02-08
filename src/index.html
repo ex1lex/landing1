@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__content">
+        <img
+          class="header__logo"
+          src="<%=require('./images/logo.png')%>"
+          alt="Логотип"
+        />
+        <nav class="header__menu-container">
+          <ul class="header__menu">
+            <li class="header__item">
+              <a class="header__link" href="/">NavItem1</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="/">NavItem2</a>
+            </li>
+            <li class="header__item header__item_active">
+              <a class="header__link" href="/">NavItem3</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__btn-container">
+          <button class="header__btn" type="button">Button</button>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="banner__line"></div>
+      <h1 class="banner__title">Lorem ipsum, dolor sit amet consectetur</h1>
+      <img
+        src="<%=require('./images/banner.png')%>"
+        alt="картинка баннера"
+        class="banner__img"
+      />
+      <div class="banner__content">
+        <div class="banner__item banner__item_type_top-left">
+          <img
+            src="<%=require('./images/item1.svg')%>"
+            alt="картинка"
+            class="banner__item-img"
+          />
+          <p class="banner__item-title">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div class="banner__item banner__item_type_top-right">
+          <img
+            src="<%=require('./images/item2.svg')%>"
+            alt="картинка"
+            class="banner__item-img"
+          />
+          <p class="banner__item-title">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div class="banner__item banner__item_type_middle-right">
+          <img
+            src="<%=require('./images/item3.svg')%>"
+            alt="картинка"
+            class="banner__item-img"
+          />
+          <p class="banner__item-title">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div class="banner__item banner__item_type_bottom-right">
+          <img
+            src="<%=require('./images/item2.svg')%>"
+            alt="картинка"
+            class="banner__item-img"
+          />
+          <p class="banner__item-title">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div class="banner__item banner__item_type_bottom-left">
+          <img
+            src="<%=require('./images/item1.svg')%>"
+            alt="картинка"
+            class="banner__item-img"
+          />
+          <p class="banner__item-title">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div class="banner__item banner__item_type_middle-left">
+          <img
+            src="<%=require('./images/item4.svg')%>"
+            alt="картинка"
+            class="banner__item-img"
+          />
+          <p class="banner__item-title">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+      <div class="banner__balls banner__balls_left"></div>
+      <div class="banner__balls banner__balls_right"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="reviews">
+        <div class="reviews__line"></div>
+        <h3 class="reviews__title">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </h3>
+        <div class="reviews__review">
+          <img
+            src="<%=require('./images/avatar.png')%>"
+            alt="аватарка"
+            class="reviews__img"
+          />
+        </div>
+      </div>
+      <div class="menu"></div>
+    </footer>
+  </body>
+</html>
