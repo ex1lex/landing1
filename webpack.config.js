@@ -3,6 +3,24 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const presets = [
+  [
+    "@babel/env",
+    {
+      targets: {
+        edge: "17",
+        ie: "11",
+        firefox: "50",
+        chrome: "64",
+        safari: "11.1",
+      },
+      useBuiltIns: "entry",
+    },
+  ],
+];
+
+module.exports = { presets };
+
 module.exports = {
   entry: {
     main: "./src/pages/index.js",

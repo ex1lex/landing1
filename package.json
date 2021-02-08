@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/ex1lex/landing1/issues"
   },
-  "homepage": "https://github.com/ex1lex/landing1#readme",
+  "homepage": "https://ex1lex.github.io/landing1/",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
