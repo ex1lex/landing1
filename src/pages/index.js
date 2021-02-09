@@ -6,6 +6,8 @@ import $ from "jquery";
 window.jQuery = window.$ = $;
 
 const itemList = Array.from(document.querySelectorAll(".menu__item"));
+const container = document.querySelector(".banner__content");
+const contentItems = Array.from(document.querySelectorAll(".banner__item"));
 
 const closeItems = (item) => {
   itemList.forEach((menuItem) => {
@@ -35,17 +37,32 @@ const openItem = (item) => {
 
 itemList.forEach((item) => {
   item.addEventListener("click", () => {
-    //toggleItem(item);
     if (item.classList.contains("menu__item_active")) {
       closeItem(item);
     } else closeItems(item);
   });
 });
 
-//TODO: изучить доку по слайдеру. Запускать только если ширина экрана меньше 425px и если он ещё не запущен. Если ширина экрана больше, то выключать его.
-// сейчас не работает включение слайдера в if
+if (window.innerWidth <= 425) {
+  $(".banner__content").slick({
+    responsive: [
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+    ],
+  });
+}
+
 window.addEventListener("resize", () => {
-  if (window.innerWidth <= 425) {
+  if (
+    window.innerWidth <= 425 &&
+    !document.querySelector(".slick-initialized")
+  ) {
     $(".banner__content").slick({
       responsive: [
         {
@@ -58,5 +75,15 @@ window.addEventListener("resize", () => {
         },
       ],
     });
+  } else if (
+    window.innerWidth > 425 &&
+    document.querySelector(".slick-initialized")
+  ) {
+    $(".banner__content").slick("unslick");
+    if (!document.querySelector(".banner__item")) {
+      contentItems.forEach((item) => {
+        container.append(item);
+      });
+    }
   }
 });

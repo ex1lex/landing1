@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,13 +32,14 @@
       </div>
     </header>
     <section class="banner">
-      <div class="banner__line"></div>
-      <h1 class="banner__title">Lorem ipsum, dolor sit amet consectetur</h1>
       <img
         src="<%=require('./images/banner.png')%>"
         alt="картинка баннера"
         class="banner__img"
       />
+      <div class="banner__line"></div>
+      <h1 class="banner__title">Lorem ipsum, dolor sit amet consectetur</h1>
+
       <div class="banner__content">
         <div class="banner__item banner__item_type_top-left">
           <img
@@ -106,54 +107,6 @@
     </section>
 
     <footer class="footer">
-      <div class="reviews">
-        <div class="reviews__line"></div>
-        <h3 class="reviews__title">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        </h3>
-        <div class="reviews__review">
-          <img
-            src="<%=require('./images/avatar.png')%>"
-            alt="аватарка"
-            class="reviews__img"
-          />
-          <p class="reviews__text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
-            quas, aut consectetur animi autem aliquid consequuntur suscipit
-            exercitationem laborum cupiditate magnam eaque quae deleniti, iste
-            nisi expedita, provident excepturi officia! Porro ab rerum omnis
-            magnam eligendi error nobis dolore? Porro ab rerum omnis magnam
-            eligendi error nobis dolore? Porro ab rerum omnis magnam eligendi
-            error nobis dolore?
-            <span class="reviews__author">Jane Doe</span>
-          </p>
-        </div>
-        <div class="reviews__review reviews__review_type_left">
-          <p class="reviews__text reviews__text_type_left">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
-            quas, aut consectetur animi autem aliquid
-            <span class="reviews__author">Jane Doe</span>
-          </p>
-          <img
-            src="<%=require('./images/avatar.png')%>"
-            alt="аватарка"
-            class="reviews__img reviews__img_type_left"
-          />
-        </div>
-
-        <div class="reviews__review reviews__review_type_right">
-          <img
-            src="<%=require('./images/avatar.png')%>"
-            alt="аватарка"
-            class="reviews__img reviews__img_type_right"
-          />
-          <p class="reviews__text reviews__text_type_right">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
-            quas, aut consectetur animi autem aliquid
-            <span class="reviews__author">Jane Doe</span>
-          </p>
-        </div>
-      </div>
       <div class="menu">
         <div class="menu__line"></div>
         <h3 class="menu__title">
@@ -239,6 +192,54 @@
             </p>
           </li>
         </ul>
+      </div>
+      <div class="reviews">
+        <div class="reviews__line"></div>
+        <h3 class="reviews__title">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </h3>
+        <div class="reviews__review">
+          <img
+            src="<%=require('./images/avatar.png')%>"
+            alt="аватарка"
+            class="reviews__img"
+          />
+          <p class="reviews__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
+            quas, aut consectetur animi autem aliquid consequuntur suscipit
+            exercitationem laborum cupiditate magnam eaque quae deleniti, iste
+            nisi expedita, provident excepturi officia! Porro ab rerum omnis
+            magnam eligendi error nobis dolore? Porro ab rerum omnis magnam
+            eligendi error nobis dolore? Porro ab rerum omnis magnam eligendi
+            error nobis dolore?
+            <span class="reviews__author">Jane Doe</span>
+          </p>
+        </div>
+        <div class="reviews__review reviews__review_type_left">
+          <p class="reviews__text reviews__text_type_left">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
+            quas, aut consectetur animi autem aliquid
+            <span class="reviews__author">Jane Doe</span>
+          </p>
+          <img
+            src="<%=require('./images/avatar.png')%>"
+            alt="аватарка"
+            class="reviews__img reviews__img_type_left"
+          />
+        </div>
+
+        <div class="reviews__review reviews__review_type_right">
+          <img
+            src="<%=require('./images/avatar.png')%>"
+            alt="аватарка"
+            class="reviews__img reviews__img_type_right"
+          />
+          <p class="reviews__text reviews__text_type_right">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
+            quas, aut consectetur animi autem aliquid
+            <span class="reviews__author">Jane Doe</span>
+          </p>
+        </div>
       </div>
     </footer>
   </body>
