@@ -1,7 +1,16 @@
 # landing1
 
 Тестовое задание для компании AdCombo
-Ограничение: нельзя использовать Flexbox, Grid, Bootstrap
+Структура проекта и правила именования соответствуют методологии БЭМ
+
+При выполнении задания нельзя использовать:
+- Flexbox
+- Grid
+- Bootstrap
+
+В задании используются:
+- Slick Carousel
+- Webpack
 
 **Figma**
 
@@ -10,3 +19,4 @@
 **Preview**
 
 - [Ссылка на GitHub Pages](https://ex1lex.github.io/landing1)
+
