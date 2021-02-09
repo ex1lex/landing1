@@ -1,6 +1,7 @@
 # landing1
 
 Тестовое задание для компании AdCombo
+Ограничение: нельзя использовать Flexbox, Grid, Bootstrap
 
 **Figma**
 
