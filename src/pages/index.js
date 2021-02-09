@@ -1,8 +1,7 @@
 import "./index.css";
 import "slick-carousel";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import $ from "jquery";
+import arrow from "../images/arrow.svg";
 window.jQuery = window.$ = $;
 
 const itemList = Array.from(document.querySelectorAll(".menu__item"));
@@ -43,19 +42,24 @@ itemList.forEach((item) => {
   });
 });
 
-if (window.innerWidth <= 425) {
+const sliderInit = () => {
   $(".banner__content").slick({
-    responsive: [
-      {
-        breakpoint: 425,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-    ],
+    dots: true,
+    appendArrows: $(".banner__options"),
+    appendDots: $(".banner__options"),
+    dotsClass: "banner__dots",
+    prevArrow:
+      '<button id="prev" type="button" class="banner__btn banner__btn_prev" aria-hidden="true"></button>',
+    nextArrow:
+      '<button id="next" type="button" class="banner__btn banner__btn_next"></button>',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
   });
+};
+
+if (window.innerWidth <= 425) {
+  sliderInit();
 }
 
 window.addEventListener("resize", () => {
@@ -63,18 +67,7 @@ window.addEventListener("resize", () => {
     window.innerWidth <= 425 &&
     !document.querySelector(".slick-initialized")
   ) {
-    $(".banner__content").slick({
-      responsive: [
-        {
-          breakpoint: 425,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-          },
-        },
-      ],
-    });
+    sliderInit();
   } else if (
     window.innerWidth > 425 &&
     document.querySelector(".slick-initialized")

@@ -1,0 +1,174 @@
+.menu {
+  width: 50%;
+  display: table-cell;
+  background: #f8fbff;
+  box-sizing: border-box;
+  direction: ltr;
+  padding: 100px 167px 0px 89px;
+}
+
+@media screen and (max-width: 1280px) {
+  .menu {
+    padding: 50px 35px;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .menu {
+    padding: 40px 16px 10px;
+  }
+}
+
+.menu__content {
+  max-width: 960px;
+  margin: 0 auto 0 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .menu__content {
+    margin: 0 auto;
+  }
+}
+
+.menu__line {
+  background: #00c368;
+  margin: 0 auto;
+  width: 184px;
+  height: 4px;
+}
+
+.menu__title {
+  margin: 18px auto 0;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 150%;
+  text-align: center;
+  color: #2e3a59;
+}
+
+@media screen and (max-width: 425px) {
+  .menu__title {
+    margin: 16px auto 0;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.menu__subtitle {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 47px;
+  text-align: center;
+  color: #2e3a59;
+  margin: 0 0 10px;
+}
+
+@media screen and (max-width: 425px) {
+  .menu__subtitle {
+    margin: 16px auto 30px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+.menu__container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item {
+  border-bottom: 1px solid #e7ebf0;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  overflow: auto;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .menu__item {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.menu__item:hover .menu__label {
+  color: #00c368;
+}
+
+.menu__item:last-of-type {
+  border-bottom: none;
+  margin: 0;
+}
+
+.menu__icon {
+  width: 40px;
+  height: 40px;
+  float: left;
+  padding-right: 24px;
+}
+
+@media screen and (max-width: 425px) {
+  .menu__icon {
+    display: none;
+  }
+}
+
+.menu__label {
+  float: right;
+  margin: 0;
+  display: inline-block;
+  width: calc(100% - 68px);
+  padding-right: 30px;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 40px;
+  color: #2e3a59;
+  position: relative;
+}
+
+@media screen and (max-width: 425px) {
+  .menu__label {
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%;
+    padding: 0;
+    float: none;
+    padding-right: 25px;
+  }
+}
+
+.menu__label::after {
+  content: url(../../images/arrow.svg);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.menu__label_active {
+  color: #00c368;
+}
+
+.menu__label_active::after {
+  transform: rotate(180deg);
+}
+
+.menu__text {
+  margin: 0;
+  padding: 5px 0 0 70px;
+  clear: both;
+  display: none;
+}
+
+@media screen and (max-width: 425px) {
+  .menu__text {
+    padding: 15px 0 0;
+  }
+}
+
+.menu__text_active {
+  display: block;
+}
